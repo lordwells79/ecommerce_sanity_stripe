@@ -103,6 +103,9 @@ export const StateContext = ({ children }) => {
       return prevQty - 1;
     });
   };
+  const resetQty = () => {
+    setQty(1);
+  };
 
   return (
     <Context.Provider
@@ -113,8 +116,10 @@ export const StateContext = ({ children }) => {
         totalPrice,
         totalQuantities,
         qty,
+        setQty,
         incQty,
         decQty,
+        resetQty,
         onAdd,
         toggleCartItemQuanitity,
         onRemove,
